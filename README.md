@@ -1,2 +1,2 @@
 # louismerl.in
-The louismerl.in website (my CV)
+The [louismerl.in](https://louismerl.in) website (my CV)
