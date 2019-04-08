@@ -1,21 +1,28 @@
 body {
 	color: #000000;
 	background: #ffffff;
-	font-family: sans-serif;
+	font-family: 'Chivo', sans-serif;
+	font-size: 1.8rem;
+	font-weight: 300;
+}
+
+h1 {
+	font-size: 6rem;
+	margin-bottom: 0;
 }
 
 a {
-	color: #6fb3d2;
-	font-weight: bold;
+	color: black;
+	font-weight: normal;
 }
 a:hover {
-	color: #76c7b7;
-	font-weight: bold;
+	color: black;
+	font-weight: normal;
 }
 
 .title {
 	text-align: center;
-	border-bottom: 1px solid #e0e0e0;
+	border-bottom: 1px solid black;
 }
 
 .container {
@@ -25,5 +32,9 @@ a:hover {
 }
 
 strong {
-	font-weight: bold;
+	font-weight: 900;
+}
+
+li {
+	list-style: square inside;
 }
