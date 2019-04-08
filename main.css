@@ -1,7 +1,7 @@
 body {
 	color: #000000;
 	background: #ffffff;
-	font-family: 'Open Sans', sans-serif;
+	font-family: sans-serif;
 }
 
 a {
@@ -21,4 +21,9 @@ a:hover {
 .container {
 	top: 100px;
 	max-width: 680px;
+	margin: auto;
+}
+
+strong {
+	font-weight: bold;
 }
