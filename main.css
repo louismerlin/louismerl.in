@@ -1,40 +1,9 @@
-body {
-	color: #000000;
-	background: #ffffff;
-	font-family: 'Chivo', sans-serif;
-	font-size: 1.8rem;
-	font-weight: 300;
-}
-
 h1 {
 	font-size: 6rem;
 	margin-bottom: 0;
 }
 
-a {
-	color: black;
-	font-weight: normal;
-}
-a:hover {
-	color: black;
-	font-weight: normal;
-}
-
 .title {
 	text-align: center;
 	border-bottom: 1px solid black;
-}
-
-.container {
-	top: 100px;
-	max-width: 680px;
-	margin: auto;
-}
-
-strong {
-	font-weight: 900;
-}
-
-li {
-	list-style: square inside;
 }
