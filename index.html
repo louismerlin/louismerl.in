@@ -16,39 +16,175 @@
   <link async rel="stylesheet" href="https://unpkg.com/concrete.css@1.2.0/concrete.css">
 
   <style>
-    h1 {
-      font-size: 6.4rem;
+
+
+    html {
+      font-size: 100%;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #000000;
+
+      /*
+      background-color: #bd4f6c;
+      background-image: linear-gradient(326deg, #bd4f6c 0%, #d7816a 74%);
+      background-color: #eec0c6;
+      background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+      background-color: #90d5ec;
+      background-image: linear-gradient(315deg, #90d5ec 0%, #fc575e 74%);
+      background-color: #d8dede;
+      background-image: linear-gradient(315deg, #d8dede 0%, #e5bdf6 74%);
+      background-color: #6a93cb;
+      background-image: linear-gradient(315deg, #6a93cb 0%, #a4bfef 74%);
+      */
+    }
+
+    .container {
+      width: 21cm;
+      height: 29.7cm;
+      margin: 1cm auto; 
+      font-size: 0.4cm;
+      display: flex;
+      flex-direction: row wrap;
+      padding: 0;
+      border-radius: 1.4cm;
+      background-color: #ffffff;
+    } 
+
+    img {
+      border-radius: 1.4cm 0 0 0;
+    }
+
+    .column {
+      padding: 0.5cm;
+      border-radius: 1.4cm;
+    }
+
+    #left-column {
+      flex: 7cm;
+      flex-shrink: 0;
+      border-radius: 1.4cm 0 0 1.4cm;
+      background-color: #cccccc;
+    }
+
+    .container, #left-column {
+      box-shadow:  20px 20px 60px #cccccc,
+                  -20px -20px 60px #ffffff;
+    }
+
+    ul {
+      padding-left: 0.5cm;
+    }
+
+    li {
       margin-bottom: 0;
-      font-weight: 800;
+    }
+
+    td {
+      border: none;
+      padding: 0.12cm 0;
+      min-width: 1.4cm;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        color: #ffffff;
+        background-color: #000000;
+      }
+      .container {
+        background-color: #000000;
+      }
+      #left-column {
+        background-color: #333333;
+      }
+      .container, #left-column {
+        box-shadow:  20px 20px 60px #333333,
+                    -20px -20px 60px #000000;
+      }
+    }
+
+    @media print {
+      .container {
+        box-shadow: none;
+        margin: 0;
+        border-radius: 0;
+      }
+      #left-column {
+        border-radius: 0;
+        box-shadow: none;
+      }
+      img {
+        border-radius: 0;
+      }
+    }
+
+    h1 {
+      font-size: 1cm;
+      margin-bottom: 0cm;
+      margin-top: 0.2cm;
+    }
+    h2 {
+      font-size: 0.6cm;
+    }
+    h2, h4, h5 {
+      margin: 0.3cm 0;
+    }
+
+    table {
+      margin-bottom: 0.6cm;
     }
 
     .title {
-      margin-top: 8rem;
-      padding-bottom: 4rem;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 0cm;
     }
-
     .subtitle {
-      margin-top: 0;
+      text-align: center;
+      margin-top: 0cm;
     }
 
-    .title-buttons {
-      margin: 4rem 0;
+    .links {
+      text-align: center;
+      font-size: 0.4cm;
     }
 
     .is-orange {
-      box-shadow: inset 0 -0.3rem 0 #ff6600;
+      box-shadow: inset 0 -0.1cm 0 #ff6600;
     }
     .is-blue {
-      box-shadow: inset 0 -0.3rem 0 #0000ff;
+      box-shadow: inset 0 -0.1cm 0 #0000ff;
     }
     .is-yellow {
-      box-shadow: inset 0 -0.3rem 0 #ffff00;
+      box-shadow: inset 0 -0.1cm 0 #ffff00;
     }
     .is-green {
-      box-shadow: inset 0 -0.3rem 0 #009900;
+      box-shadow: inset 0 -0.1cm 0 #009900;
     }
     .is-red {
-      box-shadow: inset 0 -0.3rem 0 #ff0000;
+      box-shadow: inset 0 -0.1cm 0 #ff0000;
+    }
+
+    @media only screen and (max-width: 21cm) {
+      .container {
+        flex-direction: column-reverse;
+        width: unset;
+        height: unset;
+        margin: 0;
+      }
+      .column {
+        width: 100%;
+      }
+      .container, #left-column {
+        box-shadow: none;
+        border-radius: 0;
+      }
+      img {
+        border-radius: 0;
+        display: block;
+        margin: auto auto;
+      }
     }
   </style>
 
@@ -56,80 +192,132 @@
 
 <body>
   <div class="container">
+    
+    <div class="column" id="left-column">
+      
+    <img src="https://avatars.githubusercontent.com/u/12018334" />
+    <br />
+    <br />
+    <div class="links">
+      <div><a target="_blank" rel="noopener noreferrer" href="https://louismerl.in/">louismerl.in</a></div>
+      <div><a target="_blank" rel="noopener noreferrer" href="https://github.com/louismerlin">github.com/louismerlin</a></div>
+      <div><a target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/louis-merlin/">linkedin.com/in/louis-merlin</a></div>
+      <div><a href="mailto:hello@louismerl.in">hello@louismerl.in</a></div>
+    </div>
+    <br />
+
+    <h2>What I <span class="is-green">can do</span></h2>
+    <ul>
+      <li>Fluent in English and French</li>
+      <br/>
+      <li>Javascript (React, Node)</li>
+      <li>Go</li>
+      <li>Reverse Engineering</li>
+      <li>Python (Django, NumPy)</li>
+      <li>C / C++</li>
+      <li>Docker</li>
+      <li>Blockchain (Ethereum)</li>
+      <li>Style with CSS</li>
+      <li>Scala</li>
+    </ul>
+
+    <h2>What I <span class="is-red">love</span></h2>
+    <ul>
+      <li>Reading</li>
+      <li>Playing music (find <strong>Louis Merlin</strong> on your favorite streaming platform)</li>
+      <li>Coding stuff</li>
+      <li>Running</li>
+      <li>Making friends</li>
+    </ul>
+
+    </div>
+
+    <div class="column">
 
     <div class="title">
       <h1>Louis Merlin</h1>
-      <h4 class="subtitle">French cybersecurity master's student at EPFL, full stack web developer on the side</h4>
-      <h5>Member of EPFL's CTF team, the <a target="_blank" rel="noopener noreferrer" href="https://ctftime.org/team/53791">polygl0ts</a></h5>
-      <h4 class="title-buttons">
-        <a class="button" target="_blank" rel="noopener noreferrer" href="mailto:hello@louismerl.in">contact me</a>
-        <a class="button" target="_blank" rel="noopener noreferrer" href="https://github.com/louismerlin">GitHub</a>
-      </h4>
+      <h4 class="subtitle">french cybersecurity master's student at EPFL</h4>
       <hr />
     </div>
 
     <br />
 
     <h2>Where I <span class="is-orange">worked</span></h2>
-    <ul>
-      <li><a target="_blank" rel="noopener noreferrer" href="https://cysec.systems/">Cysec</a> as an intern for the summer, working on cybersecurity and software development (summer 2020, 2 months)</li>
-      <li><a target="_blank" rel="noopener noreferrer" href="https://je.epfl.ch/">JE EPFL</a> as a freelancer for a full stack web project (summer 2019, 2 months)</li>
-      <li><a target="_blank" rel="noopener noreferrer" href="https://je.epfl.ch/">JE EPFL</a> as a freelancer for a blockchain project (winter 2018, 2 months)</li>
-      <li><a target="_blank" rel="noopener noreferrer" href="http://summus.tech/">Summus</a> as co-founder for a B2B software company (2017 - 2019, 2 years)</li>
-      <li><a target="_blank" rel="noopener noreferrer" href="https://leflair.vn/">Leflair</a> in Vietnam as an intern for the summer, working on improving their ERP (summer 2017, 2 months)</li>
-      <li><a target="_blank" rel="noopener noreferrer" href="https://agepoly.ch/">AGEPoly</a> as IT manager (2015 - 2017, 2 years)</li>
-    </ul>
-
-    <br />
+    <table>
+      <tbody>
+        <tr>
+          <td>2021 now</td>
+          <td><a target="_blank" rel="noopener noreferrer" href="https://www.ar.admin.ch/en/home.html">armasuisse</a> as a <a target="_blank" rel="noopener noreferrer" href="https://www.ar.admin.ch/en/armasuisse-wissenschaft-und-technologie-w-t/cyber-defence_campus.html">CYD</a> fellow for my <b>master thesis</b> with <a target="_blank" rel="noopener noreferrer" href="http://hexhive.epfl.ch/">HexHive</a> in software security (6 months)</td>
+        </tr>
+        <tr>
+          <td>2020</td>
+          <td><a target="_blank" rel="noopener noreferrer" href="https://cysec.systems/">CYSEC</a> as an <b>intern</b>, working on cybersecurity and software development (2 months)</td>
+        </tr>
+        <tr>
+          <td>2019</td>
+          <td><a target="_blank" rel="noopener noreferrer" href="https://je.epfl.ch/">JE EPFL</a> as a <b>freelancer</b> for a full stack web project (2 months)</td>
+        </tr>
+        <tr>
+          <td>2018</td>
+          <td><a target="_blank" rel="noopener noreferrer" href="https://je.epfl.ch/">JE EPFL</a> as a <b>freelancer</b> for a blockchain project (2 months)</li></td>
+        </tr>
+        <tr>
+          <td>2017 2019</td>
+          <td><b>CTO</b> and <b>co-founder</b> of a B2B software company (2 years)</li></td>
+        </tr>
+        <tr>
+          <td>2017</td>
+          <td><a target="_blank" rel="noopener noreferrer" href="https://leflair.com/">Leflair</a> in Vietnam as an <b>intern</b>, working on improving their ERP (2 months)</li></td>
+        </tr>
+        <tr>
+          <td>2015 2017</td>
+          <td><a target="_blank" rel="noopener noreferrer" href="https://agepoly.ch/">AGEPoly</a> as IT manager (2 years)</li></td>
+        </tr>
+      </tbody>
+    </table>
 
     <h2>What I <span class="is-blue">accomplished</span></h2>
-    <ul>
-      <li><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/EPFL_ReO/status/1356256471609126915">CYD Fellowship</a> for my master thesis at <a target="_blank" rel="noopener norefferer" href="https://hexhive.epfl.ch/">HexHive</a> (spring 2021)</li>
-      <li>Several great performances at CTFs worldwide with the <a target="_blank" rel="noopener noreferrer" href="https://ctftime.org/team/53791">polygl0ts</a></li>
-      <li><a target="_blank" rel="noopener noreferrer" href="https://www.swissnexsanfrancisco.org/startups/xgrant/">Xgrant Entrepreneurship Camps</a> in San Francisco (summer 2018)</li>
-      <li><a target="_blank" rel="noopener noreferrer" href="./BusinessConcept.pdf">Innosuisse Start-up Training: Business Concept</a>, a 14-week training program (spring 2018)</li>
-      <li><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/START_Hack/status/967761563150057478">First place at the Start Hack Hackathon</a> where we also won the NEO blockchain prize (spring 2018)</li>
-    </ul>
+    <table>
+      <tbody>
+        <tr>
+          <td>spring 2021</td>
+          <td><b><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/EPFL_ReO/status/1356256471609126915">CYD Fellowship</a></b> for my master thesis at <a target="_blank" rel="noopener norefferer" href="https://hexhive.epfl.ch/">HexHive</a></td>
+        </tr>
+        <tr>
+          <td>2019</td>
+          <td><b>Bachelor's degree at <a href="https://epfl.ch/">EPFL</a></b> in Computer Science (Lausanne, Switzerland)</td>
+        </tr>
+        <tr>
+          <td>since 2019</td>
+          <td>Great performances at <b>CTFs worldwide</b> with the <a target="_blank" rel="noopener noreferrer" href="https://ctftime.org/team/53791">polygl0ts</a> and the <a target="_blank" rel="noopener noreferrer" href="https://ctftime.org/team/42934">0rganizers</a> (top 10 in 2021). Qualified for <b>DEFCON 29</b> ! (08/2021)</td>
+        </tr>
+        <tr>
+          <td>summer 2018</td>
+          <td><a target="_blank" rel="noopener noreferrer" href="https://www.swissnexsanfrancisco.org/startups/xgrant/">Xgrant Entrepreneurship Camps</a> in San Francisco</td>
+        </tr>
+        <tr>
+          <td>spring 2018</td>
+          <td><a target="_blank" rel="noopener noreferrer" href="./BusinessConcept.pdf">Innosuisse Start-up Training: Business Concept</a>, a 14-week training program</td>
+        </tr>
+        <tr>
+          <td>spring 2018</td>
+          <td><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/START_Hack/status/967761563150057478">First place at the Start Hack Hackathon</a> where we also won the NEO blockchain prize</td>
+        </tr>
+      </tbody>
 
-    <br />
+    </table>
 
-    <h2>What I <span class="is-yellow">coded</span></h2>
+    <h2>What I also <span class="is-yellow">coded</span></h2>
     <ul>
+      <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/hexhive/dis-cover">dis-cover</a> my master thesis' project, coming soon&#8482;</li>
       <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/louismerlin/concrete.css">concrete.css</a> a simple and to the point CSS microframework, powering this site</li>
       <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/louismerlin/repfl">repfl</a> a web app to find a free room at EPFL</li>
       <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/louismerlin/reeq">reeq</a> a ultra simple, ultra light, dependency-free and tree-shakeable HTTP client for the browser, made with JSON in mind</li>
       <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/louismerlin/neo-caritas">Neo Caritas</a> a smart contract & interface for providing reliable income to NGOs on the NEO Blockchain, winner of <a href="https://starthack.ch">Start Hack</a> 2018</li>
-      <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/GaspardPeduzzi/opentimes">The Open Times</a> an autonomous and peer reviewed journal built upon the Colony platform, built at ETHBERLIN 2018</li>
-      <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/louismerlin/blinc.click">blinc.click</a> an incremental game on the Ethereum blockchain</li>
       <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/louismerlin/spydeer">Spydeer</a> a web app that keeps a log of the people who connected to your local network</li>
     </ul>
 
-    <br />
-
-    <h2>What I <span class="is-green">can do</span></h2>
-    <ul>
-      <li>Javascript (React, Node)</li>
-      <li>Go</li>
-      <li>Python (Django, NumPy, SciKit)</li>
-      <li>C / C++</li>
-      <li>Docker</li>
-      <li>Blockchain (Ethereum, Neo)</li>
-      <li>Style with CSS</li>
-      <li>Scala</li>
-    </ul>
-
-    <br />
-
-    <h2>What I <span class="is-red">love</span></h2>
-    <ul>
-      <li>Reading</li>
-      <li>Running</li>
-      <li>Coding stuff</li>
-      <li>Playing music (find <strong>Louis Merlin</strong> on your favorite streaming platform)</li>
-      <li>Making friends</li>
-    </ul>
-
-    <br />
+    </div>
 
   </div>
 
